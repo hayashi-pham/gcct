@@ -10,45 +10,6 @@ CWD = os.getcwd()
 
 # All found ngrok authtoken from github
 tokens = {
-    "lostcatbox": "1X7aYWPuFKYzvewLbnNoMo71kZi_2uzbB966Q4TU5cpgNPKhy",
-    "zero-structure": "1UqHsShi6o3ketf426P5UtVdTfs_5XFD6sFRMkryka8fAbLd3",
-    "ekkleesia": "7LE18LK8zeaDYeybp5fKP_6GNG1oHEfhTnQE7s9qpw",
-    "SEARteam1928": "1Qe1IeySOQWSTnpQ3eFfr8j7Oi5_2zhanqnpZwHBhsfANd6yf",
-    "angenalZZZ": "7pWLVhS1gxiMAQdaFeYJy_31krnw9drNLLJftaNSFnm",
-    "lukikrk": "1XJNNnG8kZsPjjFmLsYNWCC0gIo_7VpBhwTcvhiuK4o2G2jbt",
-    "bhavya7777": "1XzP70k7YVrg7MMaHQWPks0Q8Za_7y6b1mTDJDmJWcuqt5qTp",
-    "hector605": "1Y14GB7E4acXxWYnVTiBejgnLuV_853z7mAgaTJxE9KY3HnCW",
-    "fouille": "1XkoKNLcyiPECcQfGUjrTVzN64P_7tv2YgC4DSnazyVtpCpHm",
-    "rikitz": "1Xc7z0uHxDoI9Ah06EQKgH61zoP_6WTPXDGvjFmcp2o7gNmqa",
-    "VictorM369": "3c4WZaxPbjeRwRibY5opU_2N4TTRKaDubtEWMeKkFXn",
-    "YHF7": "3fW4eXHdUN3ziCBXcahZ_3tnDdaTyLw8tKzJtKZkLp",
-    "cyberkallan": "3CqeFZQht43cG5Z2YKfyv_6aKTrgrbo1HtyRi78hRKK",
-    "Toxic-Omega": "1RCQwctVjSz8AIzHO6S55jm8XB8_5N6PqyZVnoN7mUVqF1yvT",
-    "DevLuDaley": "1XTxsRKP8XyxvaJigX9XFXU2FvK_4dqzLxNRJHBz8A3aoPC85",
-    "randyramig": "3Y8YSw6bvC9CsbYeRczmt_8akMuLYA3bAUshP1NCMnW",
-    "sz-xcf": "1XSYq8gmxzNgMlYQzERmC50uBot_6qURZnj43KsYF2GWaUamm",
-    "api1": "6qGnEsrCL4GqZ7hMfqpyz_7ejAThUCjVnU9gD5pbP5u",
-    "api2": "1Q4i7F6isO7zZRrrjBKZzZhwsMu_74yJqoEs1HrJh1zYyxNo1",
-    "api3": "1SCsbuawjv9d79jlhlfNljaFTaB_5heVkcR6C7Sk8UBaQ1U1C",
-    "api5": "1Q45NXgsx6oyusN3GiNAYvkNJPS_AveYUDBcPHsvRvf21WZv",
-    "api6": "1Q6smHt4Bzz9VEXTwj3a7p5Gdx2_5mp6ivT6N6nB3YmRHUEM3",
-    "api7": "7VJwGkCTTUubiGhgz6Gv6_5fMLganRSKj9ntdefnF5o",
-    "api9": "5S28rBKgc22ZW7evyedNT_YvEm15RZSHdXgS4QwYbk",
-    "api12": "3VnrrXDQVHoNp9HvHFhqX_3X4JExwm6L9n6w4ppL1qy",
-    "api13": "1ShshNwfhQcyOqlMjnBDVE5X5jC_3WAmzomMHAgkunka4dSck",
-    "api14": "772yFAui6ynH9AYx29HHS_5Xcr88pHtPTQLwewv7Ctk",
-    "api16": "5HmAWwzDdkYp8CdzDQMDS_4BGwsK7AdMssLnSttZEeh",
-    "api17": "1T750atJi3xccndeUqJ4ewiS62o_2s6f8GUccL1qDUXTGSftN",
-    "api18": "1QUysRUo97w5mdB6sCZvTTMM0aK_3unoMs6nYd7grgCkuhbj3",
-    "api19": "3CqeFZQht43cG5Z2YKfyv_6aKTrgrbo1HtyRi78hRKK",
-    "api20": "5eMywZLisJNdybqpFLVgs_4XQDeF3YCMHu1Ybf7mVE6",
-    "api21": "4Cg1cEwCT7Ek89zT4VcdB_4GPAjMFgu6nhwY7SxQm94",
-    "api22": "1SGs4s9NrhxP9FRURszjL1nITSv_otcpfpb6aMVEL13u3dv1",
-    "api23": "1StL3sIccfR624Uc3BGV36XA0qG_6cAMMYFdKtPjtWax3AHSK",
-    "api24": "1SuK2ukM9Z4NohoJbU9224uMzXr_6h1ABdCrJU2EviZv4RN4r",
-    "api26": "7ecmt2Kux5uYsTUHrrqGU_3W9CJnaSeSyxiwkjxNhHc",
-    "api27": "3CqeFZQht43cG5Z2YKfyv_6aKTrgrbo1HtyRi78hRKK",
-    "api28": "2DXURjrUhAZZNMhqN5m1F_6HHzejcfRecP8upwJnNBd"
 }
 
 
@@ -61,7 +22,7 @@ class ngrok:
     self.region = region
     self.configPath, self.dport = dBug
     self.TOKEN = TOKEN
-    self.USE_FREE_TOKEN = USE_FREE_TOKEN
+    self.USE_FREE_TOKEN = False
     self.service = service
     if USE_FREE_TOKEN:
       self.sdict = {}
@@ -82,7 +43,7 @@ class ngrok:
             from IPython.display import clear_output
             ipython = get_ipython()
 
-            print(r"Copy authtoken from https://dashboard.ngrok.com/auth")
+            print(r"Copy authtoken from https://dashboard.ngrok.com/get-started/your-authtoken")
             __temp = ipython.magic('%sx read -p "Token :"')
             tokens['your'] = __temp[0].split(':')[1]
             USR_Api = "your"
@@ -98,6 +59,7 @@ class ngrok:
   def ngrok_config(self, token, Gport, configPath, region, service):
     import os
     data = """
+    version: 2
     region: {}
     update: false
     update_channel: stable
@@ -308,16 +270,15 @@ def installNgrok():
     if checkAvailable("/usr/local/bin/ngrok"):
         return
     else:
-        import os
-        from zipfile import ZipFile
+        import os, tarfile
         from urllib.request import urlretrieve
 
-        ngURL = "https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip"
-        urlretrieve(ngURL, 'ngrok-amd64.zip')
-        with ZipFile('ngrok-amd64.zip', 'r') as zip_ref:
-            zip_ref.extractall('/usr/local/bin/')
+        ngURL = "https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz"
+        urlretrieve(ngURL, 'ngrok-amd64.tgz')
+        with tarfile.open('ngrok-amd64.tgz', 'r:gz') as tar_ref:
+            tar_ref.extractall('/usr/local/bin/', filter='fully_trusted')
         os.chmod('/usr/local/bin/ngrok', 0o755)
-        os.unlink('ngrok-amd64.zip')
+        os.unlink('ngrok-amd64.tgz')
 
 def installAutoSSH():
     if checkAvailable("/usr/bin/autossh"):
@@ -425,7 +386,7 @@ class LocalhostRun:
       os.makedirs(filePath[:-16], exist_ok=True)
       open(filePath, 'w').close()
     installAutoSSH()
-    if not id:id=str(uuid.uuid4())[:8]
+    if not id:id="nokey" #str(uuid.uuid4())[:8]
     self.connection=None
     self.id=id
     self.port=port
@@ -459,7 +420,15 @@ class LocalhostRun:
     self.connection=Popen(f"autossh -R 80:localhost:{self.port} {self.id}@ssh.localhost.run -o StrictHostKeyChecking=no -o ServerAliveInterval={self.interval} -o ServerAliveCountMax={self.retries}".split(), stdout=PIPE, stdin=PIPE)
     #print("ssh -R 80:localhost:{self.port} {self.id}@ssh.localhost.run -o StrictHostKeyChecking=no -o ServerAliveInterval={self.interval} -o ServerAliveCountMax={self.retries}")
     try:
-      newAddr = re.findall("http://(.*?.localhost.run)",self.connection.stdout.readline().decode("utf-8"))[0]
+      newAddr = ""
+      while True:
+        line = self.connection.stdout.readline()
+        print(line)
+        if newAddr or line == "":
+          break
+        reAddr = re.findall("https?:\/\/(?:www\.)?[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}(?:\/[^\s]*)?",line.decode("utf-8"))
+        if reAddr:
+          newAddr = reAddr[0]
       localhostOpenDB[str(self.port)] = newAddr 
       accessSettingFile("localhostDB.json" , localhostOpenDB, v=False)
       return newAddr
@@ -493,7 +462,7 @@ class PortForward:
               clear_output()
               loadingAn(name="lds")
               textAn("Starting localhost ...", ty="twg")
-          data = dict(url="http://"+LocalhostRun(port).keep_alive())
+          data = dict(url=LocalhostRun(port).keep_alive())
           if displayB:
               displayUrl(data, btc)
           return data
