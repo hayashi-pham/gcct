@@ -15,7 +15,7 @@ tokens = {
 
 class ngrok:
 
-  def __init__(self, TOKEN=None, USE_FREE_TOKEN=True,
+  def __init__(self, TOKEN=None,
                service=[['Service1', 80, 'tcp'], ['Service2', 8080, 'tcp']],
                region='us',
                dBug=[f"{HOME}/.ngrok2/ngrok.yml", 4040]):
@@ -24,7 +24,7 @@ class ngrok:
     self.TOKEN = TOKEN
     self.USE_FREE_TOKEN = False
     self.service = service
-    if USE_FREE_TOKEN:
+    if self.USE_FREE_TOKEN:
       self.sdict = {}
       for i, sn in enumerate(service):
         tempcP = f'{HOME}/.ngrok2/'+sn[0]+'.yml'
@@ -440,12 +440,12 @@ class LocalhostRun:
 
 
 class PortForward:
-  def __init__(self,connections,region=None,SERVICE="localhost",TOKEN=None,USE_FREE_TOKEN=None,config=None):
+  def __init__(self,connections,region=None,SERVICE="localhost",TOKEN=None,config=None):
     c=dict()
     for con in connections:
       c[con[0]]=dict(port=con[1],proto=con[2])
     self.connections=c
-    self.ngrok=ngrok(TOKEN,USE_FREE_TOKEN,connections,region,config)
+    self.ngrok=ngrok(TOKEN,connections,region,config)
     self.SERVICE = SERVICE
 
   def start(self,name,btc='b',displayB=True,v=True):
@@ -471,5 +471,5 @@ class PortForward:
 
 
 class PortForward_wrapper(PortForward):
-  def __init__(self,SERVICE,TOKEN,USE_FREE_TOKEN,connections,region,config):
-    super(self.__class__,self).__init__(connections,region,SERVICE,TOKEN,USE_FREE_TOKEN,config)
+  def __init__(self,SERVICE,TOKEN,connections,region,config):
+    super(self.__class__,self).__init__(connections,region,SERVICE,TOKEN,config)
