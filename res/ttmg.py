@@ -404,7 +404,7 @@ def updateCheck(self, Version):
           return message
 
     check = UpdateChecker()
-    check.URL = "https://raw.githubusercontent.com/Xazmah/GCCT/master/update.xml"
+    check.URL = "https://raw.githubusercontent.com/hayashi-pham/GCCT/master/update.xml"
     currentVersion = check.getVersion("currentVersion")
     message = check.getMessage("message")
 
