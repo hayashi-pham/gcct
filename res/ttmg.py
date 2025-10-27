@@ -590,7 +590,7 @@ class PortForward:
     self.connections=c
     if config:config[1] = closePort(config[1])
     self.config = config
-    if SERVICE=="ngrok":self.ngrok=ngrok(TOKEN,USE_FREE_TOKEN,connections,region,self.config)
+    if SERVICE=="ngrok":self.ngrok=ngrok(TOKEN,connections,region,self.config)
     self.SERVICE = SERVICE
 
   def start(self,name,btc='b',displayB=True,v=True):
